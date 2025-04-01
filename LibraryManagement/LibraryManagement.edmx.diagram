@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ffb764ef089a40878628cb91f1760857" Name="Diagram1" ZoomLevel="86">
+        <EntityTypeShape EntityType="LiModel.BookDetail" Width="1.5" PointX="6.375" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LiModel.BorrowingReceiptDetail" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LiModel.FineReceiptDetail" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LiModel.ReaderDetail" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LiModel.sysdiagram" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LiModel.BorrowedBook" Width="1.5" PointX="8.25" PointY="2.875" IsExpanded="true" />
+        <AssociationConnector Association="LiModel.FK__BorrowedB__Borro__5D95E53A" ManuallyRouted="false" />
+        <AssociationConnector Association="LiModel.FK__BorrowedB__Borro__5CA1C101" ManuallyRouted="false" />
+        <AssociationConnector Association="LiModel.FK__Borrowing__Reade__5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="LiModel.FK__FineRecei__Borro__625A9A57" ManuallyRouted="false" />
+        <AssociationConnector Association="LiModel.FK__FineRecei__Reade__6166761E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

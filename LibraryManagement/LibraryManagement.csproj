@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E4E32B0-A949-4611-8616-15F51070CB35}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LibraryManagement</RootNamespace>
+    <AssemblyName>LibraryManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BookItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BookItem.Designer.cs">
+      <DependentUpon>BookItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian_BorrowingList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian_BorrowingList.Designer.cs">
+      <DependentUpon>Librarian_BorrowingList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian_FineList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian_FineList.Designer.cs">
+      <DependentUpon>Librarian_FineList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian_Home.Designer.cs">
+      <DependentUpon>Librarian_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Librarian_ReaderList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Librarian_ReaderList.Designer.cs">
+      <DependentUpon>Librarian_ReaderList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagement.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagement.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LibraryManagement.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LibraryManagement.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BookInfo.cs" />
+    <Compile Include="Models\BorrowedBook.cs" />
+    <Compile Include="Models\BorrowingReceiptInfo.cs" />
+    <Compile Include="Models\FineInfo.cs" />
+    <Compile Include="Models\ReaderInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reader_BorrowingHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader_BorrowingHistory.Designer.cs">
+      <DependentUpon>Reader_BorrowingHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader_FineCheck.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader_FineCheck.Designer.cs">
+      <DependentUpon>Reader_FineCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reader_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reader_Home.Designer.cs">
+      <DependentUpon>Reader_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisterForm.Designer.cs">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BookItem.resx">
+      <DependentUpon>BookItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian_BorrowingList.resx">
+      <DependentUpon>Librarian_BorrowingList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian_FineList.resx">
+      <DependentUpon>Librarian_FineList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian_Home.resx">
+      <DependentUpon>Librarian_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Librarian_ReaderList.resx">
+      <DependentUpon>Librarian_ReaderList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reader_BorrowingHistory.resx">
+      <DependentUpon>Reader_BorrowingHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader_FineCheck.resx">
+      <DependentUpon>Reader_FineCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reader_Home.resx">
+      <DependentUpon>Reader_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisterForm.resx">
+      <DependentUpon>RegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="LibraryManagement.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LibraryManagement.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LibraryManagement.edmx.diagram">
+      <DependentUpon>LibraryManagement.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LibraryManagement.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryManagement.edmx</DependentUpon>
+      <LastGenOutput>LibraryManagement.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LibraryManagement.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LibraryManagement.edmx</DependentUpon>
+      <LastGenOutput>LibraryManagement.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\ke sach 2.jpg" />
+    <None Include="Resources\ke sach 1.jpg" />
+    <None Include="Resources\ke sach.jpg" />
+    <None Include="Resources\Hiệpdeptraiharry.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
